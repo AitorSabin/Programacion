@@ -1,0 +1,22 @@
+package ejercicio2;
+
+import java.util.Scanner;
+
+public class Matricula {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String c = sc.nextLine();
+		String c1 = sc.nextLine();;
+		int contador =4;
+		int contador1 =3;
+		if(c.length()<=contador) {
+			System.out.println(c);
+		}if(c1.length()<=contador1) {
+			System.out.println(c1);
+		}
+		System.out.println(c+c1);
+		sc.close();
+	}
+}

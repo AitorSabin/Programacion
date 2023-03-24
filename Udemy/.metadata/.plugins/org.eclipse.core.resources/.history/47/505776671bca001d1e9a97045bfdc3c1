@@ -1,0 +1,17 @@
+package ejercicio7;
+
+public class Cliente {
+	private String nombre;
+	private String apellido;
+	private String dni;
+	private int numeroCuenta;
+	
+	public Cliente(String nombre, String apellido, String dni, int numeroCuenta) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.dni = dni;
+		this.numeroCuenta = numeroCuenta;
+	}	
+
+}

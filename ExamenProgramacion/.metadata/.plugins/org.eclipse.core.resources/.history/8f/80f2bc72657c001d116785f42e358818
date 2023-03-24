@@ -1,0 +1,14 @@
+package ejercicio1;
+
+public class Reloj {
+
+	public static void main(String[] args) {
+		int horas = 22;
+		int minutos = 0;
+		int segundos = 0;
+		if (horas <=24) {
+			System.out.println(horas);
+		}
+	}
+
+}

@@ -1,0 +1,47 @@
+package ejercicio7;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		double saldo;
+		int numeroCuenta;
+		int nCuentas;
+		String nombre;
+		String apellido;
+		String dni;
+		Cuenta cuentas[];
+		Cliente cliente;
+		
+		System.out.println("Introduce el nombre del Cliente: ");
+		nombre= sc.nextLine();
+		System.out.println("Introduce el apellido del Cliente: ");
+		apellido = sc.nextLine();
+		System.out.println("Introduce el dni del Cliente: ");
+		dni = sc.nextLine();
+		System.out.println("Introduce el NUMERO de cuentas del Cliente: ");
+		nCuentas= sc.nextInt();
+
+		cuentas = new Cuenta[nCuentas];
+		
+		for(int i=0; i<cuentas.length; i++) {
+			System.out.println("Introduce los datos para la cuenta "+(i+1)+":");
+			System.out.println("Introuce el numero de Cuenta: ");
+			numeroCuenta= sc.nextInt();
+			System.out.println("Introduce el saldo de la Cuenta: ");
+			saldo= sc.nextDouble();
+			
+			cuentas[i]= new Cuenta(saldo, numeroCuenta);
+		}
+		
+		for(int i=0; i<cuentas.length; i++) {
+			
+			System.out.println("Introduce el SALDO de la cuenta del Cliente. "+(i+1)+":");
+			saldo= sc.nextDouble();
+		}
+		
+		System.out.println("Introduce el numero ");
+	}
+}

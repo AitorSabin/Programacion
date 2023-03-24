@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+    <fullyQualifiedTypeName name="Ejercicio2.Tablero"/>
+    <fullyQualifiedTypeName name="ejercicio3.Vehiculo"/>
+    <fullyQualifiedTypeName name="ejercicio4.Atletismo"/>
+    <fullyQualifiedTypeName name="ejercicio1.Cuadrilatero"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="ejercicio5.Triangulo_Isosceles"/>
+    <fullyQualifiedTypeName name="ejercicio6.NumeroComplejo"/>
+    <fullyQualifiedTypeName name="ejercicio7.Cliente"/>
+    <fullyQualifiedTypeName name="ejercicio1Repaso.Cuadrilatero"/>
+    <fullyQualifiedTypeName name="ejercicio2Repaso.Tablero"/>
+    <fullyQualifiedTypeName name="ejercicio3Repaso.Vehiculo"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="ejercicio4Repaso.Atletismo"/>
+</qualifiedTypeNameHistroy>

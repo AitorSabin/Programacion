@@ -1,0 +1,19 @@
+package ejercicio2;
+
+import java.util.Scanner;
+
+public class Matricula {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String c = sc.nextLine();
+		int contador =7;
+		if(c.length()<=contador) {
+			System.out.println(c);
+		}
+		System.out.println(c.charAt(contador=0) + c.charAt(contador=1) + c.charAt(contador=2));
+		
+		sc.close();
+	}
+}

@@ -1,0 +1,10 @@
+package ejercicio1;
+
+public class Reloj {
+	public static int horas = 0-24;
+	public static void main(String[] args) {
+		horas = 25;
+		System.out.println(horas);
+	}
+
+}

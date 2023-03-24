@@ -1,0 +1,17 @@
+1677238118419	Extract local variable 'existedepart'
+1677238181617	Extract constant 'NOEXISTEDEPART'
+1677238231564	Convert local variable 'existedepart' to field
+1677238296699	Extract local variable 'depar_error'
+1677238332340	Convert local variable 'depar_error' to field
+1677239614512	Extract method 'borrar'
+1677239651617	Extract method 'modificar'
+1677239689576	Extract method 'consultar'
+1677239766432	Extract method 'insertarDepartamentos'
+1677240616399	Extract method 'altadepart'
+1677240654500	Extract method 'consuldepart'
+1677240714630	Extract method 'borradepart'
+1677240755365	Extract method 'modifdepart'
+1677240915095	Change method 'modifdepart'
+1677240958026	Change method 'borradepart'
+1677240992753	Change method 'consuldepart'
+1677241012027	Change method 'altadepart'

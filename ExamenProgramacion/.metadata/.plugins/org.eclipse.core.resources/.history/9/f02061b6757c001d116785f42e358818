@@ -1,0 +1,20 @@
+package ejercicio2;
+
+import java.util.Scanner;
+
+public class Matricula {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String c = sc.nextLine();
+		String c1 ="";
+		for(int i = 0;i<=2; i++) {
+			char caracter = c.charAt(i);
+			c1= c1.concat(String.valueOf(caracter));
+		}
+		String resultado = c1;
+		System.out.println(resultado);
+		sc.close();
+	}
+}

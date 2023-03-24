@@ -1,0 +1,32 @@
+package ejercicio1;
+
+import java.util.Scanner;
+
+public class Reloj {
+	int horas = 22;
+	int minutos = 0;
+	int segundos = 0;
+	public static void main(String[] args) {
+		int horas = 22;
+		int minutos = 0;
+		int segundos = 0;
+		if (horas <=24) {
+			System.out.print(horas + ":");
+		}if (minutos <=59) {
+			System.out.print(minutos + ":");
+		}if(segundos <=59) {}
+			System.out.print(segundos);
+	}
+	public void horas() {
+		Scanner sc = new Scanner(System.in);
+		int horas = sc.nextInt();
+	}
+	public void minutos() {
+		Scanner sc = new Scanner(System.in);
+		int minutos = sc.nextInt();
+	}
+	public void segundos() {
+		Scanner sc = new Scanner(System.in);
+		int segundos = sc.nextInt();
+	}
+}

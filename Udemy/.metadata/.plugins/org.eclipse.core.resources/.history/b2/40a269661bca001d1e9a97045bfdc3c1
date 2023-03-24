@@ -1,0 +1,38 @@
+package ejercicio7;
+
+public class Cuenta {
+	private double saldo;
+	private int idnumeroCuenta;
+	
+	public Cuenta(double saldo, int numeroCuenta) {
+		this.saldo = saldo;
+		this.idnumeroCuenta = numeroCuenta;
+	}
+
+	public double getSaldo(int numeroCuenta) {
+		if(numeroCuenta == this.idnumeroCuenta) {
+			return saldo;
+		}else {
+			return numeroCuenta;			
+		}
+	}
+	
+	public double ingresarDinero(double x, int numeroCuenta) {
+		if(numeroCuenta == this.idnumeroCuenta) {
+			saldo += x;
+			return saldo;
+		}else {
+			return numeroCuenta;
+		}
+	}	
+	
+	public double retirarDinero(double x, int numeroCuenta) {
+		if(numeroCuenta == this.idnumeroCuenta) {	
+			saldo -= x;
+			return saldo;
+		}else {
+			return numeroCuenta;			
+		}
+	}
+	
+}

@@ -1,0 +1,46 @@
+public Equipo luchar() {
+		Equipo equipoInicial = equipoA;
+		Equipo equipoFinal = equipoB;
+		if (Math.random() < 0.5) {
+			equipoInicial = equipoB;
+			equipoFinal = equipoA;
+		}
+		while(true) {
+			Luchador luchadorA = null;
+			try {
+				luchadorA = 
+						equipoInicial.getMiembros()
+							.stream()
+							.filter(l -> !l.vencido()) //Lambda expression
+							.findFirst()
+							.get();	
+			} catch(NoSuchElementException e) {
+				return equipoFinal;
+			}
+			Luchador luchadorB = null;
+			try {
+				luchadorB = 
+						equipoFinal.getMiembros()
+							.stream()
+							.filter(l -> !l.vencido()) //Lambda expression
+							.findFirst()
+							.get();	
+			} catch(NoSuchElementException e) {
+				return equipoInicial;
+			}
+			if (turno % 2 == 0) {
+				double ataque = luchadorA.atacar();
+				luchadorB.defender(ataque);
+			}
+			else {
+				double ataque = luchadorB.atacar();
+				luchadorA.defender(ataque);
+			}
+			turno++;
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}

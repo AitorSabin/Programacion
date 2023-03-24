@@ -1,0 +1,16 @@
+package ejercicio2;
+
+import java.util.Scanner;
+
+public class Matricula {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String c = sc.nextLine();;
+		int contador =7;
+		if(c.length()<contador) {
+			System.out.println(c);
+		}
+		sc.close();
+	}
+}
