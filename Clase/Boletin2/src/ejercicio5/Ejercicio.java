@@ -8,6 +8,7 @@ public class Ejercicio {
 		Scanner sc = new Scanner(System.in);
 		int cantidadFC;
 		boolean comprobar = false;
+		
 		System.out.println("Introduce la cantidad de filas y columnas que va a tener tu matriz: ");
 		cantidadFC = sc.nextInt();
 		int numeros[][]= new int[cantidadFC][cantidadFC];
@@ -41,9 +42,9 @@ public class Ejercicio {
 			}
 		}
 		if(comprobar==true) {
-			System.out.println("\nLa matriz es cuadrada");
+			System.out.println("\nLa matriz es cuadrada es una matriz identidad");
 		}else {
-			System.out.println("\nLa matriz NO es cuadrada");
+			System.out.println("\nLa matriz es cuadrada NO es una matriz identidad");
 		}
 		
 		sc.close();

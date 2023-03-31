@@ -4,11 +4,13 @@ public class Factura {
 	private int codigo;
 	private int cantidadVendidaLitros;
 	private double precioLitro;
+	private double facturaIndividual;
 	
-	public Factura(int codigo, int cantidadVendidaLitros, double precioLitro) {
+	public Factura(int codigo, int cantidadVendidaLitros, double precioLitro, double facturaIndividual) {
 		this.codigo = codigo;
 		this.cantidadVendidaLitros = cantidadVendidaLitros;
 		this.precioLitro = precioLitro;
+		this.facturaIndividual= facturaIndividual;
 	}
 
 	public double getPrecioLitro() {
@@ -20,7 +22,9 @@ public class Factura {
 	}
 
 	public String mostrarDatos() {
-		return "El codigo: "+(codigo+1)+" ha vendido "+cantidadVendidaLitros+" litros a: "+precioLitro+" € el litro";
+		return "El codigo: "+(codigo+1)
+				+" ha vendido "+cantidadVendidaLitros+" litros a: "+precioLitro+" € el litro"
+				+ " y su facturacion total es: "+facturaIndividual;
 	}
 	
 	public int masDeSeiscientos(Factura facturas[]) {

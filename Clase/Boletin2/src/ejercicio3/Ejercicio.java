@@ -10,7 +10,7 @@ public class Ejercicio {
 		boolean negativo= false;
 		
 		for(int i=0; i<numero.length; i++) {
-			System.out.println("Introduce los numeros requeridos: "+(i+1)+".");;
+			System.out.println("Introduce los numeros requeridos: "+(i+1)+".");
 			numero[i]= sc.nextInt();
 			if(numero[i]<0) {
 				negativo = true;
