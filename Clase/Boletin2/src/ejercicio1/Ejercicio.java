@@ -8,7 +8,7 @@ public class Ejercicio {
 		Scanner sc= new Scanner(System.in);
 		int dia;
 		int mes;
-		int año;
+		int aÃ±o;
 		boolean correcto = false;
 		
 		do {
@@ -16,9 +16,9 @@ public class Ejercicio {
 			dia = sc.nextInt();
 			System.out.println("Introduce el mes: ");
 			mes = sc.nextInt();
-			System.out.println("Introduce el año: ");
-			año = sc.nextInt();
-			if(año >=1900 && año <=2023) {
+			System.out.println("Introduce el aï¿½o: ");
+			aÃ±o = sc.nextInt();
+			if(aÃ±o >=1900 && aÃ±o <=2023) {
 				if(dia >=1 && dia <=31) {
 					if(mes >=1 && mes <=12) {
 						switch (mes){
@@ -42,7 +42,7 @@ public class Ejercicio {
 				}
 			}
 		}while(correcto == false);
-		System.out.println(dia+"/"+mes+"/"+año);
+		System.out.println(dia+"/"+mes+"/"+aÃ±o);
 		sc.close();
 	}
 

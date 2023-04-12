@@ -8,7 +8,7 @@ public class Ejercicio {
 		Scanner sc= new Scanner(System.in);
 		int numero1;
 		int numero2;
-		int tamañoArray;
+		int tamaÃ±oArray;
 		int divisible=0;
 		int contador=0;
 		
@@ -19,8 +19,8 @@ public class Ejercicio {
 			numero2=sc.nextInt();
 		}while(numero1>numero2);
 		
-		tamañoArray= numero2-numero1;
-		int[]array= new int[tamañoArray];
+		tamaÃ±oArray= numero2-numero1;
+		int[]array= new int[tamaÃ±oArray];
 		
 		for(int j= numero1; j<=numero2-1; j++) {
 			divisible=0;

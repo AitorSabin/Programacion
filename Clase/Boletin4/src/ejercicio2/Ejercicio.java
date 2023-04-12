@@ -22,6 +22,7 @@ public class Ejercicio {
 
 		System.out.println(x+" "+y);
 
+		sc.close();
 	}
 
 }
