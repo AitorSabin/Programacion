@@ -53,21 +53,21 @@ public class Reloj {
 	public void asignarMinutos() {
 		do {
 			System.out.println("Introduce el minuto: ");
-			minutos = sc.nextInt();
-		} while (minutos < MINUTOS_MINIMO || minutos > MINUTOS_MAXIMO);
+			this.setMinutos(sc.nextInt());
+		} while (this.getMinutos() < MINUTOS_MINIMO || this.getMinutos() > MINUTOS_MAXIMO);
 	}
 
 	public void asignarSegundos() {
 		do {
 			System.out.println("Introduce los segundos: ");
-			segundos = sc.nextInt();
-		} while (segundos < SEGUNDOS_MINIMO || segundos > SEGUNDOS_MAXIMO);
+			this.setSegundos(sc.nextInt());
+		} while (this.getSegundos() < SEGUNDOS_MINIMO || this.getSegundos() > SEGUNDOS_MAXIMO);
 	}
 
 	public void mostrasHora() {
-		int tempSegundo = segundos;
-		int tempMinutos = minutos;
-		int tempHoras = horas;
+		int tempSegundo = this.getSegundos();
+		int tempMinutos = this.getMinutos();
+		int tempHoras = this.getHoras();
 
 		if ((tempSegundo + 1) > SEGUNDOS_MAXIMO) {
 			tempSegundo = SEGUNDOS_MINIMO;
@@ -84,5 +84,4 @@ public class Reloj {
 			System.out.println(tempHoras + ":" + tempMinutos + ":" + (tempSegundo + 1));
 		}
 	}
-
 }
