@@ -1,8 +1,9 @@
 package ejercicio4;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class Primitiva3 {
+public class Primitiva3{
 	
 	private static Scanner sc = new Scanner(System.in);
 	
@@ -16,11 +17,13 @@ public class Primitiva3 {
 	private int[] numerosGanadores = new int[TOTAL_NUMEROS];
 	private int numeroComplementario;
 	private int numeroReintegro;
+	
 
 	public Primitiva3(int dia, int mes, int ano) {
 		this.dia = dia;
 		this.mes = mes;
 		this.ano = ano;
+		hacerSorteo();
 	}
 
 	public static String toString(int[] a) {
@@ -45,8 +48,16 @@ public class Primitiva3 {
 				+ " fue el siguiente:\r\n" + "Números premiados: " + toString(numerosGanadores) + "\r\n"
 				+ "Complementario: " + numeroComplementario + "\r\n" + "Reintegro: " + numeroReintegro + "\r\n" + "");
 	}
+	
+	@Override
+	public String toString() {
+		return "El resultado del sorteo realizado el " + dia + " del " + mes + " del " + ano
+				+ " fue el siguiente:\r\n" + "Números premiados: " + Arrays.toString(numerosGanadores).replace("[", "").replace("]","") + "\r\n"
+				+ "Complementario: " + numeroComplementario + "\r\n" + "Reintegro: " + numeroReintegro + "\r\n" + "";
+	}
+	
 
-	public void hacerSorteo() {
+	private void hacerSorteo() {
 		int[] numeroGanador = new int[TOTAL_NUMEROS];
 		int numeroAleatorio;
 		int numeroComplementario=(int) (Math.random() * (MAX_NUM-1)+1);
@@ -65,16 +76,13 @@ public class Primitiva3 {
 			if(existe(numeroComplementario, numeroGanador)) {
 				numeroComplementario =(int) (Math.random() * (MAX_NUM-1)+1);
 			}
-			if(existe(numeroAleatorio, numeroGanador)) {
-				numeroReintegro=(int) (Math.random() *(MAX_REINT_NUM-0));
-			}
 		}
 		setNumerosGanadores(numeroGanador);
 		setNumeroComplementario(numeroComplementario);
 		setNumeroReintegro(numeroReintegro);
 	}
 	
-	public static boolean existe(int numeroAleatorio,int[] numeroGanador) {
+	private static boolean existe(int numeroAleatorio,int[] numeroGanador) {
 		for(int i=0; i< numeroGanador.length; i++) {
 			if(numeroAleatorio == numeroGanador[i]) {
 				return true;
@@ -132,9 +140,9 @@ public class Primitiva3 {
 	}
 	
 	public PrimitivaTicket generarBoleto() {
-		PrimitivaTicket ticket;
-		int[] numeros = new int[6];
+		int[] numeros = new int[TOTAL_NUMEROS];
 		int numeroReintegro;
+		int numeroComplementario;
 		for(int i =0; i<numeros.length; i++) {
 			do {
 				System.out.println("Introduce un numero: ["+i+"]");;
@@ -145,18 +153,40 @@ public class Primitiva3 {
 			System.out.println("Introduce un numero de Reintegro: ");
 			numeroReintegro= sc.nextInt();
 		}while(numeroReintegro <0 && numeroReintegro >MAX_REINT_NUM);
+		System.out.println("Introduce un numero Complementario: ");
+		numeroComplementario = sc.nextInt();
 		
-		return ticket = new PrimitivaTicket(numeros, numeroReintegro);
+		return new PrimitivaTicket(numeros, numeroReintegro, numeroComplementario);
 	}
 	
 	public void mostrarPremio(PrimitivaTicket ticket) {
-		hacerSorteo();
-		if(getNumerosGanadores() == ticket.getNumeros() && getNumeroReintegro() == ticket.getNumeroReintegro()) {
-			
+		int contador=0;
+		for(int i=0; i<TOTAL_NUMEROS;i++) {
+			if(existe(ticket.getNumeros()[i], numerosGanadores)) {
+				contador++;
+			}
+		}
+		if(contador == TOTAL_NUMEROS) {
+			System.out.println("El boleto tiene los 6 números premiados: Premio de 500000€!");
+		}else if(contador == TOTAL_NUMEROS-1 && getNumeroComplementario() == ticket.getNumeroComplementario()) {
+			System.out.println( "El boleto tiene 5 números premiados y el complementario: Premio de 10000€!");
+		}else if(contador == TOTAL_NUMEROS-1) {
+			System.out.println("El boleto tiene 5 números premiados: Premio de 500€!");
+		}else if(contador == TOTAL_NUMEROS-2 && getNumeroComplementario() == ticket.getNumeroComplementario()) {
+			System.out.println("El boleto tiene 4 números premiados y el complementario: Premio de 20€!");
+		}else if(getNumeroReintegro() == ticket.getNumeroReintegro()) {
+			System.out.println("El boleto tiene el número del reintegro: Reintegro del boleto!");
+		}else {
+			System.out.println("El billete no tiene premio");
 		}
 	}
+	
 	public static void main(String[] args) {
 		Primitiva3 primitiva3 = new Primitiva3(28, 11, 1998);
-		primitiva3.generarBoleto();
+		primitiva3.mostrarResultado();
+		System.out.println(primitiva3.toString());
+		System.out.println("\n");
+		primitiva3.mostrarPremio(primitiva3.generarBoleto());
 	}
+	
 }

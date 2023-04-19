@@ -3,6 +3,13 @@ package ejercicio4;
 public class PrimitivaTicket {
 	private int[] numeros;
 	private int numeroReintegro;
+	private int numeroComplementario;
+	
+	public PrimitivaTicket(int[] numeros, int numeroReintegro, int numeroComplementario) {
+		this.numeros = numeros;
+		this.numeroReintegro = numeroReintegro;
+		this.numeroComplementario = numeroComplementario;
+	}
 	
 	public int[] getNumeros() {
 		return numeros;
@@ -16,10 +23,15 @@ public class PrimitivaTicket {
 	public void setNumeroReintegro(int numeroReintegro) {
 		this.numeroReintegro = numeroReintegro;
 	}
-	public PrimitivaTicket(int[] numeros, int numeroReintegro) {
-		this.numeros = numeros;
-		this.numeroReintegro = numeroReintegro;
+	public int getNumeroComplementario() {
+		return numeroComplementario;
 	}
+	public void setNumeroComplementario(int numeroComplementario) {
+		this.numeroComplementario = numeroComplementario;
+	}
+	
+	
+	
 	
 	
 }
