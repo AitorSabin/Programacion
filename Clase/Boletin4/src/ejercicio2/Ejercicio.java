@@ -8,19 +8,19 @@ public class Ejercicio {
 		Scanner sc = new Scanner(System.in);
 		int x;
 		int y;
-		int aux=0;
-		
+		int aux = 0;
+
 		System.out.println("Introduce el valor del numero 1: ");
 		x = sc.nextInt();
 		System.out.println("Introduce el valor del numero 2: ");
 		y = sc.nextInt();
-		
-		System.out.println(x+" "+y);
-		aux= x;
-		x= y;
+
+		System.out.println(x + " " + y);
+		aux = x;
+		x = y;
 		y = aux;
 
-		System.out.println(x+" "+y);
+		System.out.println(x + " " + y);
 
 		sc.close();
 	}
