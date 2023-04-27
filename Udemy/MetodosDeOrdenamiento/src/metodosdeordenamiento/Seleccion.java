@@ -9,7 +9,6 @@ public class Seleccion {
 	public static void main(String[] args) {
 		int array[];
 		int nElementos;
-		int aux;
 		
 		System.out.println("Introduce el numero de elementos del array: ");
 		nElementos = sc.nextInt();
